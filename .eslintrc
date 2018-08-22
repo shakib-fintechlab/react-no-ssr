@@ -27,7 +27,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "prettier"
+    "prettier",
+    "jest-enzyme"
   ],
   "env": {
     "es6": true,
