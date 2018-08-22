@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoSSR Client onSSR: false; Mounted Should show children (Hello) 1`] = `
+<NoSSR>
+  <MyComp>
+    <div>
+      Hello
+    </div>
+  </MyComp>
+</NoSSR>
+`;
+
+exports[`NoSSR Client onSSR: true; Mounted Should show children (Hello) 1`] = `
+<NoSSR
+  onSSR={<Loading />}
+>
+  <MyComp>
+    <div>
+      Hello
+    </div>
+  </MyComp>
+</NoSSR>
+`;
+
+exports[`NoSSR Server onSSR: false Should not show children 1`] = `<span />`;
+
+exports[`NoSSR Server onSSR: true Should show children (Loading) 1`] = `
+<div>
+  Loading...
+</div>
+`;

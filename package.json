@@ -14,7 +14,12 @@
     "lint:fix": "yarn lint --fix",
     "lint:staged": "lint-staged",
     "remove:dist": "rimraf ./dist",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:coverage": "NODE_ENV=test jest --coverage"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.0.0-rc.1"
   },
   "devDependencies": {
     "@babel/cli": "7.0.0-rc.1",
@@ -31,7 +36,7 @@
     "babel-plugin-react-require": "3.0.0",
     "enzyme": "3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
-    "enzyme-to-json": "3.3.4",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "5.4.0",
     "eslint-config-jest-enzyme": "^6.0.3",
     "eslint-config-prettier": "3.0.1",
@@ -46,16 +51,12 @@
     "lint-staged": "7.2.2",
     "prettier": "1.14.2",
     "react": "16.4.2",
-    "react-addons-test-utils": "15.6.2",
     "react-dom": "16.4.2",
     "rimraf": "^2.6.2",
     "sinon": "^6.1.5"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
-  },
-  "dependencies": {
-    "@babel/runtime": "7.0.0-rc.1"
   },
   "lint-staged": {
     "*.js": [
