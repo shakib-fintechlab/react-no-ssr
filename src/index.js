@@ -1,25 +1,25 @@
-import React from 'react';
+import React from 'react'
 
-const DefaultOnSSR = () => (<span></span>);
+const DefaultOnSSR = () => <span />
 
 class NoSSR extends React.Component {
   constructor(...args) {
-    super(...args);
+    super(...args)
     this.state = {
       canRender: false
-    };
+    }
   }
 
   componentDidMount() {
-    this.setState({canRender: true});
+    this.setState({ canRender: true })
   }
 
   render() {
-    const { children, onSSR = <DefaultOnSSR />} = this.props;
-    const { canRender } = this.state;
+    const { children, onSSR = <DefaultOnSSR /> } = this.props
+    const { canRender } = this.state
 
-    return canRender ? children : onSSR;
+    return canRender ? children : onSSR
   }
 }
 
-export default NoSSR;
+export default NoSSR
