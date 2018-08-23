@@ -3,20 +3,20 @@ import React from 'react'
 import NoSSR from '../'
 
 describe('NoSSR', () => {
-  describe('Server', () => {
-    describe('onSSR: false', () => {
+  describe('onServer', () => {
+    describe('without onSSR components', () => {
       const MyComp = () => <div>Hello</div>
       const wrapper = render(
         <NoSSR>
           <MyComp />
         </NoSSR>
       )
-      it('Should not show children', () => {
+      it('Should not render children', () => {
         // expect(wrapper.html()).not.toMatch(/Hello/);
         expect(wrapper).toMatchSnapshot();
       })
     })
-    describe('onSSR: true', () => {
+    describe('with onSSR component', () => {
       const MyComp = () => <div>Hello</div>
       const Loading = () => <div>Loading...</div>
       const wrapper = render(
@@ -24,27 +24,27 @@ describe('NoSSR', () => {
           <MyComp />
         </NoSSR>
       )
-      it('Should show children (Loading)', () => {
+      it('Should show the onSSR component', () => {
         // expect(wrapper.html()).toMatch(/Loading/)
         // expect(wrapper.html()).not.toMatch(/Hello/)
         expect(wrapper).toMatchSnapshot();
       })
     })
   })
-  describe('Client', () => {
-    describe('onSSR: false; Mounted', () => {
+  describe('onClient: afterMounted', () => {
+    describe('without onSSR component', () => {
       const MyComp = () => <div>Hello</div>
       const wrapper = mount(
         <NoSSR>
           <MyComp />
         </NoSSR>
       )
-      it('Should show children (Hello)', () => {
+      it('Should show children', () => {
         // expect(wrapper.html()).toMatch(/Hello/)
         expect(wrapper).toMatchSnapshot();
       })
     })
-    describe('onSSR: true; Mounted', () => {
+    describe('with onSSR component', () => {
       const MyComp = () => <div>Hello</div>
       const Loading = () => <div>Loading...</div>
       const wrapper = mount(
@@ -52,7 +52,7 @@ describe('NoSSR', () => {
           <MyComp />
         </NoSSR>
       )
-      it('Should show children (Hello)', () => {
+      it('Should show children', () => {
         // expect(wrapper.html()).not.toMatch(/Loading/)
         // expect(wrapper.html()).toMatch(/Hello/)
         expect(wrapper).toMatchSnapshot();
