@@ -11,3 +11,4 @@ coverage
 jest.config.js
 jest.setup.js
 src
+yarn-error.log
