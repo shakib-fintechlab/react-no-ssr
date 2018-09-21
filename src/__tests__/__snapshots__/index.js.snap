@@ -28,4 +28,4 @@ exports[`NoSSR onServer with onSSR component Should show the onSSR component 1`]
 </div>
 `;
 
-exports[`NoSSR onServer without onSSR components Should not render children 1`] = `<span />`;
+exports[`NoSSR onServer without onSSR components Should not render children 1`] = `null`;

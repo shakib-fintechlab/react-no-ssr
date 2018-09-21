@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DefaultOnSSR = () => <span />
+const DefaultOnSSR = () => <React.Fragment />
 
 class NoSSR extends React.Component {
   constructor(...args) {

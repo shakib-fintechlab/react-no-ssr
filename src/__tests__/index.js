@@ -12,8 +12,8 @@ describe('NoSSR', () => {
         </NoSSR>
       )
       it('Should not render children', () => {
-        // expect(wrapper.html()).not.toMatch(/Hello/);
-        expect(wrapper).toMatchSnapshot();
+        // expect(wrapper.html()).toBeNull
+        expect(wrapper).toMatchSnapshot()
       })
     })
     describe('with onSSR component', () => {
@@ -27,7 +27,7 @@ describe('NoSSR', () => {
       it('Should show the onSSR component', () => {
         // expect(wrapper.html()).toMatch(/Loading/)
         // expect(wrapper.html()).not.toMatch(/Hello/)
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot()
       })
     })
   })
@@ -41,7 +41,7 @@ describe('NoSSR', () => {
       )
       it('Should show children', () => {
         // expect(wrapper.html()).toMatch(/Hello/)
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot()
       })
     })
     describe('with onSSR component', () => {
@@ -55,7 +55,7 @@ describe('NoSSR', () => {
       it('Should show children', () => {
         // expect(wrapper.html()).not.toMatch(/Loading/)
         // expect(wrapper.html()).toMatch(/Hello/)
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot()
       })
     })
   })
