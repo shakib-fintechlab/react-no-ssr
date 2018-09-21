@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import '@babel/register'
 import '@babel/polyfill'
 
@@ -28,7 +29,7 @@ global.navigator = {
 
 global.documentRef = document
 
-process.on('unhandledRejection', function(error) {
+process.on('unhandledRejection', error => {
   console.error('Unhandled Promise Rejection:')
   console.error((error && error.stack) || error)
 })
