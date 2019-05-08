@@ -4,8 +4,8 @@ module.exports = {
   coverageReporters: ['text', 'html'],
   moduleFileExtensions: ['', 'js', 'json'],
   setupFiles: ['<rootDir>/jest.setup.js'],
-  setupTestFrameworkScriptFile: './node_modules/jest-enzyme/lib/index.js',
-  // setupTestFrameworkScriptFile: 'jest-enzyme',
+  setupFilesAfterEnv: ['./node_modules/jest-enzyme/lib/index.js'],
+  // setupFilesAfterEnv: ['jest-enzyme'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testEnvironment: 'enzyme',
   // testEnvironmentOptions: {
@@ -18,5 +18,5 @@ module.exports = {
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   testURL: 'http://localhost',
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
-  unmockedModulePathPatterns: ['react', 'enzyme', 'jest-enzyme'],
+  unmockedModulePathPatterns: ['react', 'enzyme', 'jest-enzyme']
 }
