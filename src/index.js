@@ -1,25 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const DefaultOnSSR = () => <React.Fragment />
-
-class NoSSR extends React.Component {
-  constructor(...args) {
-    super(...args)
-    this.state = {
-      canRender: false
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ canRender: true })
-  }
-
-  render() {
-    const { children, onSSR = <DefaultOnSSR /> } = this.props
-    const { canRender } = this.state
-
-    return canRender ? children : onSSR
-  }
+const NoSSR = ({ children, onSSR = <React.Fragment /> }) => {
+  const [canRender, setCanRender] = useState(false)
+  useEffect(
+    () => {
+      if (!canRender) {
+        setCanRender(true)
+      }
+    },
+    [canRender]
+  )
+  return canRender ? children : onSSR
 }
 
 export default NoSSR
