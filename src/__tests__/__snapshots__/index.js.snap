@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoSSR onClient: afterMounted with onSSR component Should show children 1`] = `
+<NoSSR
+  onSSR={<Loading />}
+>
+  <MyComp>
+    <div>
+      Hello
+    </div>
+  </MyComp>
+</NoSSR>
+`;
+
+exports[`NoSSR onClient: afterMounted without onSSR component Should show children 1`] = `
+<NoSSR>
+  <MyComp>
+    <div>
+      Hello
+    </div>
+  </MyComp>
+</NoSSR>
+`;
+
+exports[`NoSSR onServer with onSSR component Should show the onSSR component 1`] = `
+<div>
+  Loading...
+</div>
+`;
+
+exports[`NoSSR onServer without onSSR components Should not render children 1`] = `null`;

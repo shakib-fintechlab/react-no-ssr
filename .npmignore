@@ -6,5 +6,9 @@
 .idea
 .babelrc
 .eslintrc
-npm-debug.log
+.prettierrc
+coverage
+jest.config.js
+jest.setup.js
 src
+yarn-error.log
