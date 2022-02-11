@@ -1,7 +1,7 @@
 {
-  "name": "react-no-ssr",
+  "name": "react-no-ssr-depup",
   "version": "2.0.0",
-  "description": "React component to wrap non SSR components.",
+  "description": "React component to wrap non SSR components with upgraded dependencies",
   "repository": {
     "type": "git",
     "url": "https://github.com/kadirahq/react-no-ssr.git"
